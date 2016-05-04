@@ -1,21 +1,71 @@
+\RequirePackage[l2tabu,orthodox]{nag}
+\RequirePackage{fixltx2e}
+
 \documentclass[11pt]{bxart}
 
 \usepackage[widespace]{fourier}
 \usepackage{microtype}
 \usepackage{lipsum}
 
+\usepackage{booktabs}
+\usepackage[bf]{caption}
+
 \title{\textbf{Testing B/X Article}}
 \author{Peter H.\ Fr\"ohlich}
+
+\newcommand{\f}{\bfseries}
 
 \begin{document}
 \maketitle
 \tableofcontents
 
 \section{Welcome}
-\lipsum[1-10]
+\lipsum[1-6]
+
+\begin{table}
+\footnotesize
+\centering
+\begin{tabular}{cccc}
+Charisma & Adjustment   & Maximum number & Morale of\\
+Score    & to Reactions & of retainers   & retainers\\
+\cmidrule(lr){1-1}\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+3      & \(-2\) & 1 & 4\\
+4--5   & \(-2\) & 2 & 5\\
+6--8   & \(-1\) & 3 & 6\\
+9--12  & None   & 4 & 7\\
+13--15 & \(+1\) & 5 & 8\\
+16--17 & \(+2\) & 6 & 9\\
+18     & \(+2\) & 7 & 10\\
+\end{tabular}
+\caption{Charisma Bonuses and Penalties. Easy to pull off, but terrible
+without at least bold headers.}
+\label{charisma}
+\end{table}
 
 \section{Stylin' in Style}
-\lipsum[11-20]
+\subsection{Well}
+\lipsum[11-15]
+\subsection{Now}
+\lipsum[16-20]
+
+\begin{table*}
+\small
+\centering
+\begin{tabular}{lllllccc@{\quad\quad\quad}cr}
+\f Dragon & \f Where   & \f Breath & \f Range                   & \f       & \f Chance     & \f Chance of    & \multicolumn{3}{c}{\f Spells (by level)}\\
+\f Type   & \f Found   & \f Weapon & \f Length \(\times\) Width & \f Shape & \f of Talking & \f being Asleep & \f 1 & \f 2 & \f 3\\
+\cmidrule(lr){1-1}\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}\cmidrule(lr){5-5}\cmidrule(lr){6-6}\cmidrule(lr){7-7}\cmidrule(lr){8-10}
+White & Cold region    & Cold      & \(80' \times 30'\)         & Cone     &  10\% & 50\% & 3 & - & -\\
+Black & Swamp, marsh   & Acid      & \(60' \times 5'\)          & Line     &  20\% & 40\% & 4 & - & -\\
+Green & Jungle, forest & Gas       & \(50' \times 40'\)         & Cloud    &  30\% & 30\% & 3 & 3 & -\\
+Blue  & Desert, plain  & Lightning & \(100' \times 5'\)         & Line     &  40\% & 20\% & 4 & 4 & -\\
+Red   & Mountain, hill & Fire      & \(90' \times 30'\)         & Cone     &  50\% & 10\% & 3 & 3 & 3\\
+Gold  & Anywhere       & Fire/Gas  & \(90' \times 30'\)/\(50' \times 40'\) & Cone/Cloud & 100\% &  5\% & 4 & 4 & 4\\
+\end{tabular}
+\caption{The Dreaded Dragon Table. Only one change was necessary, saying
+``Gas'' instead of ``Chlorine Gas'' for Greens. Oh, and a smaller font.}
+\label{dragons}
+\end{table*}
 
 \section{Zwecks Geil}
 \lipsum[21-28]

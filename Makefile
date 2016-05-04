@@ -9,4 +9,4 @@ read:
 	evince bxtest.pdf &
 
 clean:
-	rm -rf *.aux *.log *.toc *.pdf
+	rm -rf *.aux *.log *.toc bxtest.pdf

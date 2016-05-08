@@ -28,7 +28,7 @@
 % We'll go for two columns to keep the lines reasonably short, but
 % we tweak the layout to be a little looser. Not quite as much as
 % B/X however.
-\setlength{\columnsep}{0.35in}
+\setlength{\columnsep}{2em}
 
 % Deal with widows, orphans, and keep LaTeX from stretching paragraphs
 % apart.

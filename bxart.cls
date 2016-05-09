@@ -59,5 +59,5 @@
 }
 \pagestyle{plain}
 
-% No section numbers, no uppercase.
+% No section numbers in headers either.
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
